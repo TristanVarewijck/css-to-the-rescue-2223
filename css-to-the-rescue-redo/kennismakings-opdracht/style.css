@@ -1,0 +1,372 @@
+html{
+font-family: sans-serif;
+background-color: #f5f5f5;
+color: #333;
+margin: 0;
+padding: 0;
+}
+
+body{
+position: relative;
+margin: 0;
+padding: 0;
+height: 100vh;
+background-image: url("./background-img.jpg");
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+overflow: hidden;
+z-index: -1;
+}
+
+a{
+    text-decoration: none;
+    display: block;
+}
+
+.stoplight-container{
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+transform: scale(0.45);
+}
+
+.blocks{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.blocks div:first-of-type{
+width: 9px;
+height: 9px;
+background: red;
+}
+
+.blocks div:nth-of-type(2){
+width: 12px;
+height: 12px;
+background: yellow;
+}
+
+.blocks div:last-of-type{
+width: 15px;
+height: 15px;
+background: green;
+}
+
+.stoplight {
+border: 5px solid rgb(101, 101, 101);
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+gap: 15px;
+padding: 15px 20px 15px 20px;
+border-radius: 10px;
+background: rgb(25, 25, 25);
+z-index: 1;
+}
+  
+.stoplight div {
+width: 50px;
+height: 50px;
+border-radius: 50%; 
+border-top: 5px solid rgb(101, 101, 101);
+border-bottom: 1.5px solid rgb(101, 101, 101);
+border-left: 1.5px solid rgb(101, 101, 101);
+border-right: 1.5px solid rgb(101, 101, 101);
+box-shadow: rgb(25, 25, 25);
+}
+
+.stoplight div:first-of-type{
+background-color: rgba(255, 0, 0, 0.611);
+top: 10px;
+}
+
+.stoplight div:nth-of-type(2) {
+background-color: rgba(255, 255, 0, 0.613);
+top: 80px;
+}
+
+.stoplight div:last-of-type {
+background-color: rgba(0, 128, 0, 0.603);
+top: 150px;
+}
+
+.pole{
+width: 15px;
+height: 250px;
+background:rgb(25, 25, 25);
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: center;
+}
+
+.pole div{
+width: 50px;
+height: 15px;
+background:rgb(25, 25, 25);
+border: 1.5px solid rgb(101, 101, 101);
+}
+
+.stoplight-buttons{
+position: absolute;
+bottom:0;
+left: 10%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 15px;
+background:rgb(25, 25, 25); 
+padding: 25px 25px;
+border-radius: 10px 10px 0 0;
+border: 3.5px solid rgb(101, 101, 101); 
+border-bottom: none; 
+z-index: 1;
+}
+
+.stoplight-buttons p{
+color: white;
+font-size: 17.5px;
+font-weight: 500; 
+margin: 0;
+}
+
+.stoplight-buttons div{
+    display: flex;  
+    gap: 10px;
+    align-items: center;
+}
+
+.stoplight-buttons div a {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stoplight-buttons div a:first-of-type {
+    background: orange;
+}
+
+.stoplight-buttons div a:last-of-type {
+    background: lightblue;
+}
+
+.stoplight-buttons div a img{
+    width: 85%;
+}
+
+.stoplight-buttons label{
+color: white;
+background-color: white;
+width: 50px;
+height: 50px;
+border-radius: 4px;
+}
+
+.stoplight-buttons label:first-of-type{
+background-color: rgba(255, 0, 0, 0.609);
+}
+
+.stoplight-buttons label:nth-of-type(2){
+background-color: rgba(255, 255, 0, 0.614);
+}
+
+.stoplight-buttons label:last-of-type{
+background-color: rgba(0, 128, 0, 0.611);
+}
+
+.stoplight-buttons label input{
+    visibility: hidden;
+}
+
+.stoplight-buttons label:has(#red:checked){
+background-color: red;
+transition: 0.5s ;
+}
+
+.stoplight-buttons label:has(#yellow:checked){
+background-color: yellow;
+transition: 0.5s ;
+}
+
+.stoplight-buttons label:has(#green:checked){
+background-color: rgb(13, 202, 13);
+transition: 0.5s ;
+}
+
+body:has(#red:checked) .stoplight div:first-of-type{
+    animation-duration: 1s;
+    animation-name: blinkRed;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    box-shadow: 0px 20px 40px 1px rgba(255, 0, 0, 0.712);
+}
+
+body:has(#yellow:checked) .stoplight div:nth-of-type(2){
+    animation-duration: 1s;
+    animation-name: blinkYellow;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    box-shadow: 0px 20px 40px 1px rgba(255, 255, 0, 0.726);
+}
+
+body:has(#green:checked) .stoplight div:last-of-type{
+    animation-duration: 1s;
+    animation-name: blinkGreen;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    box-shadow: 0px 20px 40px 1px rgba(13, 202, 13, 0.716);
+}
+
+@keyframes blinkRed {
+    0% {
+        bacs: rgba(255, 0, 0, 0.609);
+    }
+    25% {
+        background-color: rgba(255, 0, 0, 0.7);
+    }
+    50% {
+        background-color: rgba(255, 0, 0, 0.8);
+    }
+    75% {
+        background-color: rgba(255, 0, 0, 0.6);
+    }
+    100% {
+        background-color: rgba(255, 0, 0, 1);
+    }
+}
+
+@keyframes blinkYellow {
+    0% {
+        background-color: rgba(255, 255, 0, 0.609);
+    }
+    25% {
+        background-color: rgba(255, 255, 0, 0.7);
+    }
+    50% {
+        background-color: rgba(255, 255, 0, 0.8);
+    }
+    75% {
+        background-color: rgba(255, 255, 0, 0.6);
+    }
+    100% {
+        background-color: rgba(255, 255, 0, 1);
+    }
+}
+
+@keyframes blinkGreen {
+    0% {
+        background-color: rgba(13, 202, 13, 0.609);
+    }
+    25% {
+        background-color: rgba(13, 202, 13, 0.7);
+    }
+    50% {
+        background-color: rgba(13, 202, 13, 0.8);
+    }
+    75% {
+        background-color: rgba(13, 202, 13, 0.6);
+    }
+    100% {
+        background-color: rgba(13, 202, 13, 1);
+    }
+}
+
+body .car{
+    position: absolute;
+    bottom: 0; 
+    height: 325px;
+    width: auto;
+    z-index: -1;
+    transform: translate(-300px, 300px);
+}
+
+body:has(#red:checked) .car {
+    animation-duration: 5s;
+    animation-name: drivingRed;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+body:has(#green:checked) .car {
+    animation-duration: 5s;
+    animation-name: drivingGreen;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+body:has(#yellow:checked) .car {
+    animation-duration: 5s;
+    animation-name: drivingYellow;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes drivingGreen{
+    0%{
+        transform: translate(-300px, 300px);
+        opacity: 1;
+    }
+    25%{
+        transform: translate(125px, -100px) scale(0.8);
+        opacity: 1;
+    }
+   85% {
+       transform: translate(440px, -240px) scale(0.05);
+       opacity: 1;
+    }
+    100%{
+        transform: translate(440px, -240px) scale(0.05);
+        opacity: 0;
+    }
+}
+
+@keyframes drivingRed{
+    0%{
+        transform: translate(-300px, 300px);
+        opacity: 1;
+    }
+    50%{
+        transform: translate(125px, -100px) scale(0.8);
+        opacity: 1;
+    }
+    85%{
+        transform: translate(125px, -100px) scale(0.8);
+        opacity: 1;
+    }
+    100%{
+        transform: translate(125px, -100px) scale(0.8);
+        opacity: 0;
+    }
+}
+
+@keyframes drivingYellow{
+    0%{
+        transform: translate(-300px, 300px);
+        opacity: 1;
+    }
+    65%{
+        transform: translate(220px, -120px) scale(0.8);
+        transform: scale(0.8);
+    }
+    85% {
+        transform: translate(440px, -240px) scale(0.05);
+        opacity: 1;
+    }
+    100%{
+        transform: translate(440px, -240px) scale(0.05);
+        opacity: 0;
+    }
+}
+

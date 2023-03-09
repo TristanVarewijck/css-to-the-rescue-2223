@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./style.css">
+<title>Car drive CSS</title>
+</head>
+<body id="body">
+  <!-- target navigation -->
+  <nav>
+    <a href="#amsterdam"><p>NL</p></a>  
+    <a href="#newyork"><p>USA</p></a>
+    <a href="#paris"><p>FR</p></a>
+  </nav>
+
+  <!-- wipers -->
+  <div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- indicator / mirror -->
+  <div>
+      <!-- indicator lights -->
+    <div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+   <!-- wheater states -->
+  <span></span>
+  <span></span>
+
+   <!-- location boards -->
+  <section id="amsterdam">
+    <div>
+        <div>
+        </div>
+        <p >
+          <span style="--index: 0;">A</span>
+          <span style="--index: 1;">M</span>
+          <span style="--index: 2;">S</span>
+          <span style="--index: 3;">T</span>
+          <span style="--index: 4;">E</span>
+          <span style="--index: 5;">R</span>
+          <span style="--index: 6;">D</span>
+          <span style="--index: 7;">A</span>
+          <span style="--index: 8;">M</span>
+        </p>
+    </div>
+</section>
+
+<section id="newyork">
+    <div>
+      <div>
+      </div>
+      <p>
+        <span style="--index: 0;">N</span>
+        <span style="--index: 1;">E</span>
+        <span style="--index: 2;">W</span>
+        <span style="--index: 3;">Y</span>
+        <span style="--index: 4;">O</span>
+        <span style="--index: 5;">R</span>
+        <span style="--index: 6;">K</span>
+      </p>
+    </div> 
+</section>
+
+<section id="paris">
+    <div>
+      <div>
+      </div>
+      <p>
+        <span style="--index: 0;">P</span>
+        <span style="--index: 1;">A</span>
+        <span style="--index: 2;">R</span>
+        <span style="--index: 3;">I</span>
+        <span style="--index: 4;">S</span>
+      </p>
+     </div>
+</section>
+
+
+<!-- dashboard -->
+<div>
+    <div>
+      <!-- left side of dashboard -->
+      <div>
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+        <section>
+          <div>
+            <input type="radio" id="go-left" name="indicator" value="left">
+            <label for="go-left"><</label>
+          </div>
+          <div>
+            <input type="radio" id="off" name="indicator" value="off" checked>
+            <label for="off">off</label>
+          </div>
+          <div>
+            <input type="radio" id="go-right" name="indicator" value="right">
+            <label for="go-right">></label>
+          </div>
+          </section>
+          <section>
+          <div>
+            <input type="radio" id="wiper-on" name="wiper" value="wiper-on">
+            <label for="wiper-on">On</label>
+          </div>
+          <div>
+            <input type="radio" id="wiper-off" name="wiper" value="wiper-off">
+            <label for="wiper-off">Off</label>
+          </div>
+          </section>
+          <img style="position: absolute; left: -2.5%; top: 1%;" src="./images/steering-wheel.png" alt="steering-wheel" width="650px">
+      </div>
+
+      <!-- right side of dashboard -->
+      <div>
+        <div>
+        </div>
+        <!-- music player -->
+        <div>
+          <div>
+            <p style="margin: 0px;">West Coast FM ♫ <span>(playing...)</span></p>
+            <div style="--length:6; --height: 100%">
+              <div style="--level: 1; --index:1;"></div>
+              <div style="--level: 2; --index:2;"></div>
+              <div style="--level: 3; --index:3;"></div>
+              <div style="--level: 4; --index:4;"></div> 
+              <div style="--level: 5; --index:5;"></div> 
+              <div style="--level: 6; --index:6;"></div> 
+            </div>
+          <!-- heater -->
+          </div>
+          <div>
+            <p style="margin: 0px;">Temperature ℃</p>
+            <div>
+              <div>
+                <span>22 ℃</span>
+                <span>20 ℃</span>
+                <span>18 ℃</span>
+                <span>16 ℃</span>
+              </div>
+              <p style="font-size: 11px;">Inside Temperature ℃</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <ul>
+            <div>
+              <input type="radio" id="level-3" name="heat" value="level-3">
+              <label for="level-3">3</label>
+            </div> 
+            <div>
+              <input type="radio" id="level-2" name="heat" value="level-2">
+              <label for="level-2">2</label>
+            </div> 
+            <div>
+              <input type="radio" id="level-1" name="heat" value="level-1">
+              <label for="level-1">1</label>
+            </div>
+            <div>
+              <input type="radio" id="level-0" name="heat" value="level-0" checked>
+              <label for="level-0">off</label>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div> 
+</body>
+<script src="./scriptje.js"></script>
+</html>
