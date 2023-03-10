@@ -53,7 +53,7 @@ gap: 650px;
 body > div:first-of-type div{
 height: 1000px;
 width: 25px;
-background: var(--dashboard-black );
+background: var(--dashboard-black);
 transform: rotate(90deg) translate(150px);
 border-radius: 50%;
 padding: 0px;
@@ -90,7 +90,7 @@ z-index: 2;
 body > div:nth-of-type(2):after{
 content: "";
 position: absolute;
-top: -43%;
+top: -30%;
 width: 25px;
 height: 25px;
 background-color: var(--dashboard-black);
@@ -152,36 +152,37 @@ transition: all 200ms ease-in-out;
 
 /* rain */
 body > span:last-of-type{
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  top: 0%;
-  background: url("https://lh3.googleusercontent.com/soldUEB_tnd-2Um8fmNVsnTL-IfHIy0J0dtuIxcCOz2eiEIa7J7LQFh5f5WMwjxYTvYfF73UgTyJtwu1bd-fNnDV4qfPe0Xu8elgJSOlXI_Oj6_loCdwKsJzJdV9IK2-8RZGl_glzXhf5UZs1Q00voI6NsAVJGnCGY1KR9UBAFm-F8SEU3VlbrVKCdvp95Ynt9w0dwSQF6IzrFy6enrffolRYUb8cmuCU5VC-poEINbdj03PEZgWkmrj4ADoD1tngHuT3hd5XGIGNbkoECtaHtHHmDVl0Sh0Qy9S99MnMsBN8fFAFQyLVWnf0Aec2GSqspuoUyv_-wyJkq_Zss36S8H3Aiupejk0mjCjAjW2PSY1tnfogBfEmFfZP89_l5mNq4_o8i7E9Fl9iZoeHjP5OFenisxbiph7oral5WdoCnB9h4dt34e-2x-ldwP2EiDKERxamcDA0R4RSMx-2DCX4_lABUYguPdp2cciwytLTuRirxIiSo1skjLZ_DixXCSEXhyQIir-kaHHDZfLBppoQ_ctp0zpK-tcFpKP2vkeSvZVFPZ-5ZduHrEyp_FicbIs3RhaM3XJ6JI4j2evgh7Ua-PlJcI5ht1iKLq1jTgoP3DHntvjM6XhdIALdx2W0-EOTd91tayRhYx8v3HcJCf-07NCmHGiQUb1Z2-qReng2mgseNLA5iEARyF5SUYvfO5hCXNKugm-OVpEeqSymonOxUTaIQjeZgiwYmcM5D-NFMWZNw=s500-no");
-  animation: rain 2s linear infinite;
-  opacity: 1;
+position: fixed;
+height: 100%;
+width: 100%;
+top: 0%;
+/* bron: https://codepen.io/Kamila_Dyn/pen/abbEKYb */
+background: url("https://lh3.googleusercontent.com/soldUEB_tnd-2Um8fmNVsnTL-IfHIy0J0dtuIxcCOz2eiEIa7J7LQFh5f5WMwjxYTvYfF73UgTyJtwu1bd-fNnDV4qfPe0Xu8elgJSOlXI_Oj6_loCdwKsJzJdV9IK2-8RZGl_glzXhf5UZs1Q00voI6NsAVJGnCGY1KR9UBAFm-F8SEU3VlbrVKCdvp95Ynt9w0dwSQF6IzrFy6enrffolRYUb8cmuCU5VC-poEINbdj03PEZgWkmrj4ADoD1tngHuT3hd5XGIGNbkoECtaHtHHmDVl0Sh0Qy9S99MnMsBN8fFAFQyLVWnf0Aec2GSqspuoUyv_-wyJkq_Zss36S8H3Aiupejk0mjCjAjW2PSY1tnfogBfEmFfZP89_l5mNq4_o8i7E9Fl9iZoeHjP5OFenisxbiph7oral5WdoCnB9h4dt34e-2x-ldwP2EiDKERxamcDA0R4RSMx-2DCX4_lABUYguPdp2cciwytLTuRirxIiSo1skjLZ_DixXCSEXhyQIir-kaHHDZfLBppoQ_ctp0zpK-tcFpKP2vkeSvZVFPZ-5ZduHrEyp_FicbIs3RhaM3XJ6JI4j2evgh7Ua-PlJcI5ht1iKLq1jTgoP3DHntvjM6XhdIALdx2W0-EOTd91tayRhYx8v3HcJCf-07NCmHGiQUb1Z2-qReng2mgseNLA5iEARyF5SUYvfO5hCXNKugm-OVpEeqSymonOxUTaIQjeZgiwYmcM5D-NFMWZNw=s500-no");
+animation: rain 2s linear infinite;
+opacity: 1;
 }
 
-body:has(input[value="wiper-on"]:checked) section > span:last-of-type{
+body:has(input[value="wiper-on"]:checked) > span:last-of-type{
 opacity: 0;
 transition: all 2s 10s ease-out ;
 }
 
-body:has(input[value="wiper-off"]:checked) section > span:last-of-type{
+body:has(input[value="wiper-off"]:checked) > span:last-of-type{
 opacity: 0;
 }
 
 /* fog */
-body:has(input[value="level-1"]:checked) section > span:first-of-type{
+body:has(input[value="level-1"]:checked) > span:first-of-type{
 box-shadow: inset 0px 25px 100px rgba(255, 255, 255, 0.75);
 filter: blur(20px);
 }
 
-body:has(input[value="level-2"]:checked) section > span:first-of-type{
+body:has(input[value="level-2"]:checked)  > span:first-of-type{
   box-shadow: inset 0px 25px 100px rgba(255, 255, 255, 0.5);
 filter: blur(20px);
 }
 
-body:has(input[value="level-3"]:checked) section > span:first-of-type{
+body:has(input[value="level-3"]:checked) > span:first-of-type{
 box-shadow: inset 0px 25px 100px rgba(255, 255, 255, 0.0);
 filter: blur(20px);
 }
@@ -208,7 +209,7 @@ position: absolute;
 content: "some content";
 top: 60%;
 color: var(--dashboard-black);
-right: -64%;
+right: -60%;
 margin-left: -5px;
 background-color: var(--dashboard-black);
 }
@@ -373,7 +374,6 @@ height: 50px;
 margin-top: 25px;
 border: 2px solid var(--dashboard-gray) ;
 padding: 0px 1em 0px 1em;
-
 }
 
 body > div:nth-of-type(3) > div:first-of-type > div:first-of-type > div:first-of-type div{
@@ -635,8 +635,7 @@ background-color: var(--dashboard-black);
 
 body:has(input[value="level-0"]:checked) > div:nth-of-type(3)  > div > div:last-of-type > div:last-of-type ul div:nth-of-type(4) label {
   background: var(--warning-color-orange); 
-  color: var(--dashboard-black)
-  
+  color: var(--dashboard-black) 
 }
 
 body:has(input[value="level-1"]:checked) > div:nth-of-type(3)  > div > div:last-of-type > div:last-of-type ul div:nth-of-type(3) label {
@@ -695,23 +694,18 @@ transform: rotate(90deg);
 @keyframes bounce {
 10% {
 transform: scaleY(0.3);
---height: 30%
 }
 30% {
 transform: scaleY(1);
---height: 100%
 }
 60% {
 transform: scaleY(0.5);
---height: 50%
 }
 80% {
 transform: scaleY(0.75);
---height: 75%
 }
 100% {
 transform: scaleY(0.6);
---height: 60%
 }
 }
 
@@ -804,9 +798,9 @@ opacity: 1;
 
 @keyframes rain{
 0%{
-  background-position: 0% 0%;
+background-position: 0% 0%;
 } 
-  100%{
-  background-position: 20% 100%;
+100%{
+background-position: 20% 100%;
 }
 } 
