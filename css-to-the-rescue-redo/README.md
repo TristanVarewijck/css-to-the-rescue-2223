@@ -9,7 +9,7 @@ License
 
 ## Proces
 ### Week 01
-Tijdens de eerste les van de eindopdracht zijn er een aantal eindopdrachten getoond waaruit je kon kiezen ik heb gekozen om het bedieningspaneel te maken voor het bedieningspaneel heb ik een eigen opdracht verzonnen namelijk de binnenkant van een auto waarin je verschillende interacties moet kunnen uitvoeren als inspiratie heb ik een tekening gevonden van hoe ik het ongeveer eruit wil laten zien. 
+Tijdens de eerste les van de eindopdracht zijn er een aantal opdrachten getoond waaruit je kon kiezen ik heb gekozen om het bedieningspaneel te maken voor het bedieningspaneel heb ik een eigen opdracht verzonnen namelijk de binnenkant van een auto waarin je verschillende interacties moet kunnen uitvoeren als inspiratie heb ik een tekening gevonden van hoe ik het ongeveer eruit wil laten zien. 
 
 <foto>
 
