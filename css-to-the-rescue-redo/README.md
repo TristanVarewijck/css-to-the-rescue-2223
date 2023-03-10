@@ -14,6 +14,8 @@ Tijdens de eerste les van de eindopdracht zijn er een aantal opdrachten getoond 
 <img src="https://github.com/TristanVarewijck/css-to-the-rescue-2223/blob/main/css-to-the-rescue-redo/bedieningspaneel/images/inside-of-car-reference.avif" 
 alt="project-reference" width="500" border="10" />
 
+bron: [link to image](https://www.google.com/search?q=inside+of+car+drawing&rlz=1C5CHFA_enNL1000NL1000&sxsrf=AJOqlzVoNxnRjexWL2oGJO-QptOvrxBZmg:1678437862586&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiovs6k_ND9AhVJCuwKHTtBAwcQ_AUoAXoECAIQAw&biw=1417&bih=760&dpr=2)
+
 Zoals je zit is dit de binnenkant met meerdere knoppen, mijn uitdaging is om deze knoppen met alleen css te laten werken super leuk!
 
 ### Week 02
